@@ -14,7 +14,8 @@ a. Requisits del servidor
 - APIs i serveis web: RESTful Flask
 
 b. Llenguatges de programació
-Java
+
+- Java
 
 c. Seguretat
 - Autenticació i autorització: Verificació mitjançant email
@@ -40,12 +41,13 @@ a. Gestió d'usuari i autenticació
 - Seguretat: Polítiques de seguretat.
 
 b. Emmagatzematge local i sincronització
--Dades que es guarden en local, són sensibles?: Sí
 
--Seguretat: Keychain en iOS, Encrypted SharedPreferences en Android
+- Dades que es guarden en local, són sensibles?: Sí
+
+- Seguretat: Keychain en iOS, Encrypted SharedPreferences en Android
 
 c. Gestió d’accessibilitat
--Nivells A, AA y AAA d’accessibilitat: WCAG 
+- Nivells A, AA y AAA d’accessibilitat: WCAG 
 
 ### 4. Requisits d'Infraestructura
 - Xarxa: CDN
