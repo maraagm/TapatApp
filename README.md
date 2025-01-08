@@ -1,3 +1,5 @@
 # Projecte TapatApp
 [Descripció Projecte](descripció.md)
-[Requeriments tècnics](Requeriments_tècnics.md)
+
+
+[Requeriments tècnics](requeriments_tècnics.md)
