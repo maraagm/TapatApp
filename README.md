@@ -1,2 +1,2 @@
 Projecte TapatApp
-[Descripció Projecte](tapatApp.md)
+[Descripció Projecte](descripció.md)
