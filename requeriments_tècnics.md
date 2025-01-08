@@ -22,7 +22,7 @@ c. Seguretat
 
 - Xifratge de dades: Hash
 
-Còpies de seguretat automàtiques: Si
+- Còpies de seguretat automàtiques: Si
 
 ### 2. Frontend
 a. Tipus de Clients
