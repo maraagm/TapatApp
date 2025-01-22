@@ -81,7 +81,7 @@ multipart/form-data és un tipus de MIME utilitzat principalment per enviar form
 
 Petició Http POST
 
-<!--<form action="https://example.com/upload" method="POST" enctype="multipart/form-data">
+<form action="https://example.com/upload" method="POST" enctype="multipart/form-data">
     <label for="name">Nom:</label>
     <input type="text" id="name" name="name" value="Joan">
     <br>
@@ -89,7 +89,7 @@ Petició Http POST
     <input type="file" id="file" name="file">
     <br>
     <input type="submit" value="Enviar">
-</form>-->
+</form>
 
 es genera una petició POST
 
