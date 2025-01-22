@@ -12,5 +12,6 @@
 
 [Response](response.md)
 
-## EndPoint
+## Definició dels EndPoints del WebService
 
+[EndPoint](endpoints.md)
