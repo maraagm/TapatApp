@@ -20,7 +20,7 @@ Un HTTP request és una sol·licitud que un client (normalment un navegador web 
 
 4. Body (opcional): En cas de mètodes com POST o PUT, conté les dades que s'envien al servidor (per exemple, dades de formularis o informació en format JSON).
 
-### 1.1 Exemples de HTTP request
+## 1.1 Exemples de HTTP request
 
 GET request:
 
@@ -45,7 +45,7 @@ Content-Length: 45
 
 2. El servidor processa la sol·licitud i respon amb un HTTP response, que pot incloure dades (com una pàgina HTML) o un estat de confirmació (com 200 OK o 404 Not Found).
 
-### 1.2 clients HTTP
+## 1.2 clients HTTP
 
 curl (acrònim de Client URL) és una eina de línia de comandes utilitzada per transferir dades des d'un client fins a un servidor, o viceversa, a través de diferents protocols de xarxa, com ara HTTP, HTTPS, FTP, SFTP, SMTP, POP3, i molts més.
 
@@ -72,7 +72,7 @@ https://www.postman.com/postman/published-postman-templates/documentation/ae2ja6
 
 PS> C:\Users\amallad2\scoop\apps\curl\current\bin\curl -X POST -H "Content-Type: application/json"  -d "{'test': 'value'}" https://postman-echo.com/post
 
-### 1.3 Mime Types
+## 1.3 Mime Types
 
 Els MIME types (Multipurpose Internet Mail Extensions) són estàndards utilitzats per identificar el tipus de contingut d'un fitxer o dades en comunicacions a través d'internet. Originalment, es van crear per correu electrònic, però avui dia s'utilitzen àmpliament en protocols com HTTP per indicar el tipus de contingut d'una resposta o sol·licitud.
 
@@ -81,7 +81,7 @@ multipart/form-data és un tipus de MIME utilitzat principalment per enviar form
 
 Petició Http POST
 
-<form action="https://example.com/upload" method="POST" enctype="multipart/form-data">
+<!--<form action="https://example.com/upload" method="POST" enctype="multipart/form-data">
     <label for="name">Nom:</label>
     <input type="text" id="name" name="name" value="Joan">
     <br>
@@ -89,7 +89,7 @@ Petició Http POST
     <input type="file" id="file" name="file">
     <br>
     <input type="submit" value="Enviar">
-</form>
+</form>-->
 
 es genera una petició POST
 
