@@ -14,4 +14,6 @@
 
 ## Definició dels EndPoints del WebService
 
-[EndPoint](endpoints.md)
+- Host: 192.168.144.131:10050
+
+[Taula](endpoints.md)
