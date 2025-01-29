@@ -1,0 +1,24 @@
+classDiagram
+    class ClientView {
+        +inputUsername()
+        +showInfoUser(userData)
+    }
+
+    class ClientDAOUser {
+        +getUserByUsername(username)
+    }
+
+    class ServerWebservice {
+        +handleGetRequest(username)
+    }
+
+    class ServerDAOUser {
+        +getUserByUsername(username)
+    }
+
+    ClientView --> ClientDAOUser : Envia dades username
+    ClientDAOUser --> ServerWebservice : Petición HTTP GET username
+    ServerWebservice --> ServerDAOUser : Consulta DAOUser
+    ServerDAOUser --> ServerWebservice : Respon Objecte User if exists
+    ServerWebservice --> ClientDAOUser : Resposta HTTP amb Json User if exists
+    ClientDAOUser --> ClientView : Dades processades
