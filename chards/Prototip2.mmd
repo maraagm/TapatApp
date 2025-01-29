@@ -1,19 +1,19 @@
 classDiagram
     class ClientView {
-        +inputUsername()
-        +showInfoUser(userData)
+        inputUsername()
+        showInfoUser(userData)
     }
 
     class ClientDAOUser {
-        +getUserByUsername(username)
+        getUserByUsername(username)
     }
 
     class ServerWebservice {
-        +handleGetRequest(username)
+        handleGetRequest(username)
     }
 
     class ServerDAOUser {
-        +getUserByUsername(username)
+        getUserByUsername(username)
     }
 
     ClientView --> ClientDAOUser : Envia dades username
