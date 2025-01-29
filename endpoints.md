@@ -1,8 +1,8 @@
 # Definició dels EndPoints del Servei Web:
 
-| Descripció | Host | End-point | Method | Tipus de petició | Paràmetres | 
-|--------------|--------------|--------------|--------------|--------------|--------------|
-| Servei que consulta un User per Username | 192.168.144.131:10050 | http://192.168.144.131:10050/tapatapp/getuser | GET | HTTP GET amb URL | username (string) | 
+| Descripció | Host | End-point | Method | Tipus de petició | Paràmetres | Ex. URL |
+|--------------|--------------|--------------|--------------|--------------|--------------|--------------|
+| Servei que consulta un User per Username | 192.168.144.131:10050 | http://192.168.144.131:10050/tapatapp/getuser | GET | HTTP GET amb URL | username (string) | http://192.168.144.131:10050/tapatapp/getuser?username=mara |
 
 Respostes:
 
