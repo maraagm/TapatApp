@@ -11,9 +11,9 @@ Respostes:
     "message": "Usuario encontrado",
     "data": {
     "id": 123,
-    "username": "johndoe",
-    "email": "johndoe@example.com",
-    "name": "John Doe"}
+    "username": "mara_gm",
+    "email": "maragm@gmail.com",
+    "name": "Mara"}
 
 2.-  Code 404: 
     { "status": "error",
