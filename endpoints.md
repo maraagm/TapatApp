@@ -1,6 +1,6 @@
 # Definició dels EndPoints del Servei Web:
 
-| Descripció | Host | End-point | Method | Tipus de petició | Parametres | 
+| Descripció | Host | End-point | Method | Tipus de petició | Paràmetres | 
 |--------------|--------------|--------------|--------------|--------------|--------------|
 | Servei que consulta un User per Username | 192.168.144.131:10050 | http://192.168.144.131:10050/tapatapp/getuser | GET | HTTP GET amb URL | username, name, email, id | 
 
@@ -8,7 +8,7 @@ Respostes:
 
 1.- Code 200 Ok: 
     { "status": "success",
-    "message": "Usuario encontrado",
+    "message": "Usuari trobat",
     "data": {
     "id": 123,
     "username": "mara_gm",
@@ -17,9 +17,9 @@ Respostes:
 
 2.-  Code 404: 
     { "status": "error",
-    "message": "Usuario no encontrado" }
+    "message": "Usuari no trobat" }
 
 3.- Code 400: 
     { "status": "error",
-    "message": "Falta el parámetro 'username'"}
+    "message": "Falta el paràmetre 'username'"}
 
