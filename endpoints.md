@@ -6,7 +6,7 @@
 
 Respostes:
 
-## 1.- Code 200:
+### 1.- Code 200:
 
     { "status": "success",
     "message": "Usuari trobat",
