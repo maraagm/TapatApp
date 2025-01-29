@@ -16,12 +16,12 @@ Respostes:
     "email": "maragm@gmail.com",
     "name": "Mara"}
 
-## 2.-  Code 404: 
+### 2.-  Code 404: 
 
     { "status": "error",
     "message": "Usuari no trobat" }
 
-## 3.- Code 400: 
+### 3.- Code 400: 
 
     { "status": "error",
     "message": "Falta el paràmetre 'username'"}

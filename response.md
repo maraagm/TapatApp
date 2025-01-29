@@ -1,4 +1,4 @@
-### 2 Http Response
+# 2 Http Response
 
 Una HTTP Response (Resposta HTTP) és la resposta que el servidor envia al client després d'una petició HTTP (com ara una petició GET o POST). La resposta inclou informació sobre si la petició va ser procesada correctament o si va ocórrer un error.
 
@@ -8,7 +8,7 @@ Una resposta HTTP general es compon de tres parts principals:
 - Headers
 - Body
 
-## 2.1 Línia d'estat (Status Line)
+### 2.1 Línia d'estat (Status Line)
 
 - El protocol de la resposta: Normalment HTTP/1.1 o HTTP/2.
 - El codi d'estat HTTP: Un número que indica l'estat de la petició (com 200, 404, 500, etc.).
@@ -16,7 +16,7 @@ Una resposta HTTP general es compon de tres parts principals:
 
 HTTP/1.1 200 OK
 
-## 2.2 Headers
+### 2.2 Headers
 
 Els headers són metadades que proporcionen informació addicional sobre la resposta, com el tipus de contingut, la longitud del contingut, les cookies, i altres detalls de la comunicació.
 Exemples de headers comuns:
@@ -32,7 +32,7 @@ Content-Length: 123
 Date: Mon, 22 Jan 2025 12:00:00 GMT
 Server: Apache/2.4.41 (Ubuntu)
 
-## 2.3 Body (cos de la resposta)
+### 2.3 Body (cos de la resposta)
 El body de la resposta conté les dades que el servidor vol enviar al client. El contingut del body depèn del tipus de petició i la resposta, i pot ser una pàgina web HTML, un document JSON, un fitxer d'imatge, etc.
 
 - HTML: En el cas de pàgines web, el cos serà el codi HTML.
@@ -48,7 +48,7 @@ El body de la resposta conté les dades que el servidor vol enviar al client. El
   }
 }
 
-## 2.4 Codis d’estat de Response Http
+### 2.4 Codis d’estat de Response Http
 
 Els codis d'estat HTTP són respostes numèriques que el servidor envia al client per indicar l'estat de la petició. Aquests codis es poden agrupar en cinc categories, cada una amb una finalitat específica:
 
