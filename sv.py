@@ -44,7 +44,7 @@ def getUser():
     username= "mara_gm"
     email= "maragm@gmail.com"
 
-    return id + username + email
+    return id + " "+ username + " "+ email
 
 def getUser():
     n = str(request.args.get('name'))

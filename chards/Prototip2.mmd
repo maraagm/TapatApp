@@ -1,24 +1,30 @@
+---
+title: Diagrama de classes FrontEnd Prototip 1
+---
 classDiagram
-    class ClientView {
-        inputUsername()
-        showInfoUser(userData)
+    View <|-- DaoUser
+    DaoUser <|-- View 
+    
+    class User{
+        +int id
+        +String username
+        +String email
+        +String password
     }
 
-    class ClientDAOUser {
-        getUserByUsername(username)
+    class Error{
+        +int code
+        +String description
     }
 
-    class ServerWebservice {
-        handleGetRequest(username)
+    class View{
+        +String  username
+        +getUsernameByConsole()
+        +showInfoUser(User user)
+        +showInfoError(Error error)
     }
-
-    class ServerDAOUser {
-        getUserByUsername(username)
+    class DaoUser{
+        +String  username
+        +getUserByUsername(): User or Error
     }
-
-    ClientView --> ClientDAOUser : Envia dades username
-    ClientDAOUser --> ServerWebservice : Petición HTTP GET username
-    ServerWebservice --> ServerDAOUser : Consulta DAOUser
-    ServerDAOUser --> ServerWebservice : Respon Objecte User if exists
-    ServerWebservice --> ClientDAOUser : Resposta HTTP amb Json User if exists
-    ClientDAOUser --> ClientView : Dades processades
+    
