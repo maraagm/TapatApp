@@ -1,4 +1,4 @@
-# Dades d'entrada del'usuari
+# Dades d'entrada de l'usuari
 
 ## Inici
 
