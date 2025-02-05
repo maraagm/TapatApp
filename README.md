@@ -15,3 +15,7 @@
 ## Definició dels EndPoints del WebService
 
 [Que necessitem per cada End-point](endpoints.md)
+
+## Dades d'entrada del'usuari
+
+[Dades d'entrada](dato_entrada.md)
