@@ -2,20 +2,20 @@
 
 ## Informació
 
-[Descripció Projecte](descripció.md)
+[Descripció Projecte](/md/descripció.md)
 
-[Requeriments tècnics](requeriments_tècnics.md)
+[Requeriments tècnics](/md/requeriments_tècnics.md)
 
 ## Request & response 
 
 [Request](request.md)
 
-[Response](response.md)
+[Response](/md/response.md)
 
 ## Definició dels EndPoints del WebService
 
-[Que necessitem per cada End-point](endpoints.md)
+[Que necessitem per cada End-point](/md/endpoints.md)
 
 ## Dades d'entrada de l'usuari
 
-[Dades d'entrada](dato_entrada.md)
+[Dades d'entrada](/md/dato_entrada.md)
