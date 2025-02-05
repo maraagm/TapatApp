@@ -1,5 +1,8 @@
 flowchart TD
     A[Inici - Benvinguda] -->|Accedir| B[Login]
+    B -->|He oblidat la contrasenya| F[Cambiar contrasenya]
+    F -->|Cambiada correctament| D
+    F -->|Canvi incorrecte|A
     A -->|Registrar-se| C[Registre]
     B -->|Credencials correctes| D[Home - Pantalla principal]
     C -->|Registre completat| D
