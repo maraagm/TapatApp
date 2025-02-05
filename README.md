@@ -19,4 +19,5 @@
 ## Dades d'entrada de l'usuari
 
 [Dades d'entrada](/md/dato_entrada.md)
+
 [Diagrama](/chards/diagramPestanyes.mmd)
