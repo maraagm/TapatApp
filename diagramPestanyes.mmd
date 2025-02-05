@@ -1,0 +1,16 @@
+flowchart TD
+    A[Inici - Benvinguda] -->|Accedir| B[Login]
+    A -->|Registrar-se| C[Registre]
+    B -->|Credencials correctes| D[Home - Pantalla Principal]
+    C -->|Registre Completat| D
+    D -->|Explorar Tapes| E[Llista de Tapes]
+    D -->|Veure Mapa| F[Mapa de Tapes]
+    E -->|Seleccionar Tapa| G[Detall de la Tapa]
+    F -->|Seleccionar Tapa| G
+    G -->|Deixar Valoració| H[Valoració de la Tapa]
+    G -->|Veure Perfil del Restaurant| I[Perfil del Restaurant]
+    D -->|Accedir al Perfil| J[Perfil de l'Usuari]
+    J -->|Modificar Dades| K[Editar Perfil]
+    J -->|Configuració| L[Configuració]
+    L -->|Canviar Preferències| M[Preferències]
+    L -->|Tancar Sessió| A
