@@ -1,12 +1,12 @@
 flowchart TD
     A[Inici - Benvinguda] -->|Accedir| B[Login]
     B -->|He oblidat la contrasenya| D[Cambiar contrasenya]
-    D -->|Cambiada correctament| E
+    D -->|Cambiada correctament| B
     D -->|Canvi incorrecte|A
     A -->|Registrar-se| C[Registre]
     B -->|Credencials correctes| E[Home - Pantalla principal]
     C -->|Registre completat| E
-    E -->|Explorar pegats| F[Llista de pegats]
+    E -->|Seleccionar nen| F[Llista de nens]
     F -->|Seleccionar pegat| G[Hores actives del pegat]
     E -->|Accedir al perfil| J[Perfil de l'usuari]
     J -->|Modificar dades| K[Editar perfil]
