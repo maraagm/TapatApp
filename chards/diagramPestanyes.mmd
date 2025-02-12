@@ -1,5 +1,6 @@
 flowchart TD
     A[Inici - Benvinguda] -->|Accedir| B[Login]
+    B -->|Credencials incorrectes| B
     B -->|He oblidat la contrasenya| D[Cambiar contrasenya]
     D -->|Cambiada correctament| B
     D -->|Canvi incorrecte|A
