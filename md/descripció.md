@@ -1,4 +1,4 @@
-[INICI](README.md)
+[INICI](../README.md)
 
 # Descripció del Projecte TapatApp
 

@@ -1,4 +1,4 @@
-[INICI](README.md)
+[INICI](../README.md)
 
 # Requeriments tècnics
 ### 1. Backend (Servidor i Gestió de Dades)

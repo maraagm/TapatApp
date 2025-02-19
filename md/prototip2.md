@@ -1,4 +1,4 @@
-[INICI](README.md)
+[INICI](../README.md)
 
 # Prototip 2
 
