@@ -1,3 +1,5 @@
+[INICI](README.md)
+
 # Definició dels EndPoints del Servei Web:
 
 | Descripció | Host | End-point | Method | Tipus de petició | Paràmetres | Ex. URL |

@@ -1,3 +1,5 @@
+[INICI](README.md)
+
 # 1 Http Request
 
 Un HTTP request és una sol·licitud que un client (normalment un navegador web o una aplicació) envia a un servidor utilitzant el protocol HTTP (HyperText Transfer Protocol). Aquesta sol·licitud permet al client demanar recursos o enviar dades al servidor, com ara pàgines web, imatges o informació per processar.

@@ -1,3 +1,5 @@
+[INICI](README.md)
+
 # Dades d'entrada de l'usuari
 
 ## Inici

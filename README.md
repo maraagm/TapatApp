@@ -20,4 +20,4 @@
 
 [Dades d'entrada](/md/dato_entrada.md)
 
-[Diagrama](/chards/diagramPestanyes.mmd)
+[Prototip 2](/chards/diagramPestanyes.mmd)
