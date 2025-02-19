@@ -4,7 +4,7 @@
 
 ## Vistes del prototip
 
-# Vista del Registre:
+### Vista del Registre:
 
 - Descripció:
 
@@ -12,7 +12,7 @@
 
 - Info vista: None
 
-# Vista del Login:
+### Vista del Login:
 
 - Descripció: Formulari per accedir l'usuari.
 
@@ -20,7 +20,7 @@
 
 - Info vista: None
 
-# Vista del Registre:
+### Vista del Registre:
 
 - Descripció: Formulari per registrar l'usuari.
 
@@ -28,7 +28,7 @@
 
 - Info vista: None
 
-# Vista del Home:
+### Vista del Home:
 
 - Descripció: 
 
@@ -36,7 +36,7 @@
 
 - Info vista: None
 
-# Vista del Llista de nens:
+### Vista del Llista de nens:
 
 - Descripció: Llistat de nens a carrec i horari articular de seguiment de pegats.
 
@@ -44,7 +44,7 @@
 
 - Info vista: User, child, horari pegats.
 
-# Vista del Perfil de l'usuari:
+### Vista del Perfil de l'usuari:
 
 - Descripció: Informació de l'usuari amb posibilitat de editarla o d'entrar a la configuració.
 
