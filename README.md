@@ -12,12 +12,16 @@
 
 [Response](/md/response.md)
 
-## Definició dels EndPoints del WebService
+## Prototip 1
+
+[Diagrama 1](/chards/Prototip1.mmd)
+
+[Diagrama 2](/chards/Prototip2.mmd)
 
 [Que necessitem per cada End-point](/md/endpoints.md)
 
-## Dades d'entrada de l'usuari
+## Prototip 2
 
 [Dades d'entrada](/md/dato_entrada.md)
 
-[Prototip 2](/chards/diagramPestanyes.mmd)
+[Diagrama 1](/chards/diagramPestanyes.mmd)
