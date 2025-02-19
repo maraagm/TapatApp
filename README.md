@@ -25,3 +25,5 @@
 [Dades d'entrada](/md/dato_entrada.md)
 
 [Diagrama 1](/chards/diagramPestanyes.mmd)
+
+[Vistes Pestanyes](/md/prototip2.md)

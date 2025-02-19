@@ -38,17 +38,17 @@
 
 # Vista del Llista de nens:
 
-- Descripció:
+- Descripció: Llistat de nens a carrec i horari articular de seguiment de pegats.
 
-- Info:
+- Info: Horari per nen que modifica l'usuari segons l'activitat del pegat.
 
-- Info vista: None
+- Info vista: User, child, horari pegats.
 
 # Vista del Perfil de l'usuari:
 
-- Descripció:
+- Descripció: Informació de l'usuari amb posibilitat de editarla o d'entrar a la configuració.
 
-- Info:
+- Info: Dades de l'usuari modificables per aquest.
 
 - Info vista: None
 
