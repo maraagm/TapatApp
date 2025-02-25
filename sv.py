@@ -1,59 +1,53 @@
-from flask import Flask, request, jsonify
-
-class User:
-    def __init__(self, id, username, password, email=""):
-        self.id=id
-        self.username=username
-        self.password=password
-        self.email=email
-
-def __str__(self):
-    return "Id:" + str(self.id) + " Username:" + self.username
-
-listUsers= [
-    User(1,"usuari1", "12345", "user@gmail.com"),
-    User(2,"usuari2", "6789", "user2@gmail.com"),
-    User(3,"usuari3","0101","user3@gamail.com"),
-    User(4,"usuari4","2222")
-]
-
-class DAOUsers:
-    def __init__(self):
-        self.users=listUsers
-
-def getUserByUsername(self,username):
-    for u in self.users:
-        if u.username == username:
-            return u
-        return None
-
-daoUser = DAOUsers()
-
-'''u=daoUser.getUserByUsername("usuari1")
-if(u):
-    print(u)
-else:
-    print("No trobat")'''
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-@app.route('/tapatapp/getuser', methods=['GET'])
-def getUser():
-    n = str(request.args.get('username'))
-    id= "123"
-    username= "mara_gm"
-    email= "maragm@gmail.com"
+class User:
+    def __init__(self, id, username, password, email):
+        self.id = id
+        self.username = username
+        self.password = password
+        self.email = email
+    
+    def __str__(self):
+        print(self.username+":"+self.password+":"+self.email)
 
-    return id + " "+ username + " "+ email
+users = [
+    User(id=1, username="usuari1", password="mare", email="mare@gmail.com"),
+    User(id=2, username="usuari2", password="pare", email="pare@gmail.com")
+]
 
-def getUser():
-    n = str(request.args.get('name'))
-    email = str(request.args.get('email'))
-    return "Hello World Nombre: " + n + " Email: " + email
+class UserDAO:
+    def __init__(self):
+        self.users = users
 
-@app.route('/prototip/getuser/<string:username>',methods=['GET'])
-def prototipGetUser(username):
-    return "Prototip 1, user:" + username
+    def get_all_users(self):
+        result = []
+        for user in self.users:
+            result.append(user.__dict__)
+        return result
+
+    def get_user_by_username(self, username):
+        for user in self.users:
+            if user.username == username:
+                return user.__dict__
+        return None
+
+user_dao = UserDAO()
+
+@app.route('/prototip1/users', methods=['GET'])
+def get_users():
+    return jsonify(user_dao.get_all_users())
+
+@app.route('/prototip1/getuser', methods=['GET'])
+def get_user_by_username():
+    username=request.args.get('username', default="", type=str)
+    print("+"+username+"+")
+    user = user_dao.get_user_by_username(username)
+    if user:
+        return jsonify(user)
+    else:
+        return jsonify({"error": f"User with username {username} not found"}), 404
 
 if __name__ == '__main__':
-    app.run(debug=True,host="0.0.0.0",port="10050")
+    app.run(host='0.0.0.0', port=10050, debug=True)
