@@ -35,3 +35,21 @@ class ViewConsole:
 if __name__ == "__main__":
     username = ViewConsole.getInputUsername()
     ViewConsole.showUserInfo(username)
+
+#LogIn
+    import requests
+
+def login():
+    username = input("Usuari: ")
+    password = input("Password: ")
+
+    data = {"username": username, "password": password}
+    response = requests.post("http://127.0.0.1:5000/login", json=data)
+
+    if response.status_code == 200:
+        print("Login exitos!")
+    else:
+        print("Usuari o password incorrectes")
+
+if __name__ == "__main__":
+    login()

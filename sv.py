@@ -51,3 +51,32 @@ def get_user_by_username():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=10050, debug=True)
+
+#LogIn
+    from flask import Flask, request, jsonify
+from dadesServer import users
+
+app = Flask(__name__)
+
+#Verificar l'usuari
+from dadesServer import users  
+
+def verificar_usuario(username, password):
+    for user in users:
+        if user.username == username and user.password == password:
+            return True
+    return False
+
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.json
+    username = data.get("username")
+    password = data.get("password")
+
+    if verificar_usuario(username, password):
+        return jsonify({"message": "Login exitoso", "status": "ok"}), 200
+    else:
+        return jsonify({"message": "Usuario o contraseña incorrectos", "status": "error"}), 401
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
