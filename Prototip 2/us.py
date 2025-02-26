@@ -36,7 +36,8 @@ if __name__ == "__main__":
     username = ViewConsole.getInputUsername()
     ViewConsole.showUserInfo(username)
 
-#LogIn
+#PROTOTIP 2
+#LogIn 
     import requests
 
 def login():

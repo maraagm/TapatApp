@@ -1,21 +1,7 @@
-from flask import Flask, jsonify, request
+from flask import Flask, request, jsonify
+from dadesServer import users
 
 app = Flask(__name__)
-
-class User:
-    def __init__(self, id, username, password, email):
-        self.id = id
-        self.username = username
-        self.password = password
-        self.email = email
-    
-    def __str__(self):
-        print(self.username+":"+self.password+":"+self.email)
-
-users = [
-    User(id=1, username="usuari1", password="mare", email="mare@gmail.com"),
-    User(id=2, username="usuari2", password="pare", email="pare@gmail.com")
-]
 
 class UserDAO:
     def __init__(self):
@@ -58,6 +44,7 @@ from dadesServer import users
 
 app = Flask(__name__)
 
+#PROTOTIP 2
 #Verificar l'usuari
 from dadesServer import users  
 

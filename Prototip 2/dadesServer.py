@@ -11,8 +11,8 @@ class User:
         return self.username + ":" + self.password + ":" + self.email
 
 users = [
-    User(id=1, username="mare", password="12345", email="prova@gmail.com"),
-    User(id=2, username="pare", password="123", email="prova2@gmail.com")
+    User(id=1, username="usuari1", password="mare", email="mare@gmail.com"),
+    User(id=2, username="usuari2", password="pare", email="pare@gmail.com")
 ]
 
 # Crear les classes Child, Tap, Role, Status i Treatment
