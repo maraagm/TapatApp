@@ -1,0 +1,17 @@
+flowchart TD
+    subgraph Client [Client]
+        A[Vista <br>Input ususari] --> |Interaccció| B[Client DAO <br> Gestió des del servidor]
+        B-->M[Client Model <br> logica del negoci local]
+        B-->|Retorna dades processades|A
+    end
+
+    subgraph Servidor [Servidor]
+    B-->|Petició HTTP GET/POST| C[Webservice]
+        C-->|Consulta Model| N[Server Model<br> logica del negoci central]
+        N-->|Consulta DAO| D[Server DAO <br> accés a dades]
+        D-->|Consulta BBDD| DB[Base de dades]
+        DB-->|Retornar dades|D
+        D-->|Retornar obj processat| N
+        N-->|Retornar resposat| C
+        C-->|Resposta HTTP <br>JSON|B
+    end
