@@ -1,0 +1,48 @@
+---
+title: Diagrama de classes Frontend | Prototip 2
+---
+classDiagram
+    Vista ..>  UserDAO : Consulta a
+    UserDAO ..> Vista  : Respon la <br> petició
+    UserDAO ..> ChildDAO : Conté <br>children info
+    ChildDAO ..> UserDAO : Respon info <br> de child
+    
+    class Vista{
+        +String username
+        +mostrarInformacioUser(User usuari)
+        +mostrarChild(User Id)
+        +mostrarError(Error missatge)
+    }
+
+    class UserDAO{
+    +List Users
+        +getAllUsers(): List
+        +getUserByUsername(): dict
+        %% +enviarPeticioHTTP(username, password): void
+        %% +processarRespostaHTTP(resposta): void
+    }
+    class ChildDAO{
+    +List Children
+        +getChildren(): List
+        +getChildByUserId(): obj Child
+    }
+
+    namespace Classes_Utilitzades{
+    class Usuari{
+        -int id
+        +String username
+        +String email
+        -String password
+    }
+    class Child{
+        -int id
+        +String nom
+        +int edat
+        +Tractament tractament
+    }
+    class Error{
+        +int code
+        +String descripcio
+    }
+    
+    }

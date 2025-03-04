@@ -1,0 +1,49 @@
+---
+title: Diagrama de clases Backend | Prototip 2
+---
+
+classDiagram
+    Webservice --> DAOUser: demana info user
+    DAOUser --> User: obté info user
+    DAOUser --> Webservice: respon amb info user <br> si existeix
+    Webservice --> DAOChild: demana info child 
+    DAOChild --> Child: obté info child
+    DAOChild --> Webservice: respon info child <br> si existeix
+    DAOChild --> Tap: obté amb info tap del child 
+
+    class Webservice {
+        +showUserInfo(User)
+        +showChildInfo(Child)
+        +showTapInfo(Tap)
+    }
+
+    class DAOUser {
+        + User[] Usuaris
+        + getUserById(id)
+    }
+
+    class User {
+        + String username
+        + String email
+        + String password
+    }
+
+    class DAOChild {
+        + Child[] Children
+        + getChildByUserId(User id)
+    }
+
+    class Child {
+        + int child_id
+        + String child_name
+        + String state
+        + Tap last_tap
+    }
+
+    class Tap {
+        + int sleep_total
+        + int time_slept
+        + int time_remaining
+        + Date start_date
+        + Date end_date
+    }
