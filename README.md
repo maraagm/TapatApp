@@ -22,8 +22,10 @@
 
 ## Prototip 2
 
-[Dades d'entrada](/md/dato_entrada.md)
+[Wireframes](/chards/wireframe.mmd)
 
-[Diagrama 1](/chards/diagramPestanyes.mmd)
+[Descripció soble l'iimplementació](/md/prototip2.md)
 
-[Vistes Pestanyes](/md/prototip2.md)
+[Diagrama del Backend](/chards/diagramaBackend.mmd)
+
+[Diagrama del FrontEnd](/chards/diagramaFrontend.mmd)

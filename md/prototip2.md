@@ -2,15 +2,18 @@
 
 # Prototip 2
 
-## Vistes del prototip
+## Backend
 
-### Vista del Registre:
+# Base de dades:
 
-- Descripció:
+Importar les dades del usuaris per fer funcionar el servei (DAOUsers).
 
-- Info:
+Importar les dades del nens per fer funcionar el servei (DAOChild).
 
-- Info vista: None
+Relacionar obj user & child (relation & treatement).
+
+## FrontEnd
+
 
 ### Vista del Login:
 
@@ -25,14 +28,6 @@
 - Descripció: Formulari per registrar l'usuari.
 
 - Info: Entrada que introdueix l'usuari, username o email i password.
-
-- Info vista: None
-
-### Vista del Home:
-
-- Descripció: 
-
-- Info:
 
 - Info vista: None
 
@@ -52,3 +47,10 @@
 
 - Info vista: None
 
+### Vista del Home:
+
+- Descripció: 
+
+- Info:
+
+- Info vista: None
