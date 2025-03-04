@@ -1,69 +1,95 @@
 from flask import Flask, request, jsonify
-from dadesServer import users
+import dadesServer as dades
 
-app = Flask(__name__)
-
-class UserDAO:
+#DAOS DE LES CLASSES QUE UTILITZAREM
+class DAOUsers:
     def __init__(self):
-        self.users = users
-
-    def get_all_users(self):
-        result = []
-        for user in self.users:
-            result.append(user.__dict__)
-        return result
-
-    def get_user_by_username(self, username):
-        for user in self.users:
-            if user.username == username:
-                return user.__dict__
+        self.users=dades.users
+    # Crear metodo que hace la busqueda
+    def getUserByUsername(self,username):
+        for u in self.users:
+            if u.username == username:
+                return u.__dict__
         return None
 
-user_dao = UserDAO()
+class DAORoles:
+    def __init__(self):
+        self.roles = dades.roles
 
-@app.route('/prototip1/users', methods=['GET'])
-def get_users():
-    return jsonify(user_dao.get_all_users())
+    def getRolById(self, rol_id):
+        for rol in self.roles:
+            if rol.id == rol_id:
+                return rol.type_rol
+        return None
+   
+class DAOChild:
+    def __init__(self):
+        self.children = dades.children
+        self.relations = dades.relation_user_child
+        self.treatments = dades.treatments
 
-@app.route('/prototip1/getuser', methods=['GET'])
-def get_user_by_username():
-    username=request.args.get('username', default="", type=str)
-    print("+"+username+"+")
-    user = user_dao.get_user_by_username(username)
-    if user:
-        return jsonify(user)
-    else:
-        return jsonify({"error": f"User with username {username} not found"}), 404
+    def getChildrenByUserId(self, user_id):
+        result = []
+        allowed_roles = [1, 2, 3]  # comprovació de rols
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=10050, debug=True)
+        for relation in self.relations:
+            #if relation["user_id"] == user_id and relation["rol_id"] in allowed_roles:
+            if relation.user_id == user_id and relation.rol_id in allowed_roles:
+                for child in self.children:
+                    if child.id == relation.child_id: #["child_id"]
+                        treatment = self.getTreatmentById(child.treatment_id)
+                        result.append({
+                            "id": child.id,
+                            "name": child.child_name,
+                            "sleep_average": child.sleep_average,
+                            "treatment": treatment.name if treatment else "Cap tractament",
+                            "time": child.time
+                        })
+        return result
 
-#LogIn
-    from flask import Flask, request, jsonify
-from dadesServer import users
+    def getTreatmentById(self, treatment_id):
+        for treatment in self.treatments:
+            if treatment.id == treatment_id:
+                return treatment
+        return None
 
+# variable que llama al metodo DAOUsers de antes
 app = Flask(__name__)
+daoChild = DAOChild()
+daoUser = DAOUsers()
+#daoRol = DAORoles()
+# Endpoints
 
-#PROTOTIP 2
-#Verificar l'usuari
-from dadesServer import users  
+@app.route('/prototip2/getuser/', methods=['GET'])
+def get_user():
+    username = request.args.get('username')
+    if not username:
+        return jsonify({"error": "No s'ha proporcionat cap nom d'usuari"}), 400
 
-def verificar_usuario(username, password):
-    for user in users:
-        if user.username == username and user.password == password:
-            return True
-    return False
-
-@app.route('/login', methods=['POST'])
-def login():
-    data = request.json
-    username = data.get("username")
-    password = data.get("password")
-
-    if verificar_usuario(username, password):
-        return jsonify({"message": "Login exitoso", "status": "ok"}), 200
+    user = daoUser.getUserByUsername(username)
+    if user: #if existeix
+        return jsonify({
+            "id": user["id"],
+            "username": user["username"],
+            "email": user["email"]
+        }), 200
     else:
-        return jsonify({"message": "Usuario o contraseña incorrectos", "status": "error"}), 401
+        return jsonify({"error": "Usuari no trobat..."}), 404
+
+
+@app.route('/prototip2/getchildren/<username>', methods=['GET'])
+def get_children(username):
+    user = daoUser.getUserByUsername(username)
+    if not user:
+        return jsonify({"error": "Usuari no trobat..."}), 404
+    #children = daoChild.getChildrenByUserId(user["id"])
+    children = daoChild.getChildrenByUserId(user["id"]) if isinstance(user, dict) else daoChild.getChildrenByUserId(user.id)
+    #children = daoChild.getChildrenByUserId(user.id)
+    if children:
+        return jsonify(children), 200  # correcte
+    else:
+        return jsonify({"error": "Aquest usuari no té nens associats"}), 404
+
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True) #192.168.144.157 , host="0.0.0.0", port=10050
