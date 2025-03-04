@@ -1,5 +1,3 @@
-# Dades d'exemple amb List
-# Clase User
 class User:
     def __init__(self, id, username, password, email):
         self.id = id
@@ -10,14 +8,9 @@ class User:
     def __str__(self):
         return self.username + ":" + self.password + ":" + self.email
 
-users = [
-    User(id=1, username="usuari1", password="mare", email="mare@gmail.com"),
-    User(id=2, username="usuari2", password="pare", email="pare@gmail.com")
-]
-
-# Crear les classes Child, Tap, Role, Status i Treatment
 class Child:
-    def __init__(self, child_name, sleep_average, treatment_id, time):
+    def __init__(self, id, child_name, sleep_average, treatment_id, time):
+        self.id = id
         self.child_name = child_name
         self.sleep_average = sleep_average
         self.treatment_id = treatment_id
@@ -47,9 +40,14 @@ class Treatment:
         self.id = id
         self.name = name
 
+users = [
+    User(id=1, username="usuari1", password="mare", email="mare@gmail.com"),
+    User(id=2, username="usuari2", password="pare", email="pare@gmail.com")
+]
+
 children = [
-    Child(id=1, child_name="Carol Child", sleep_average=8, treatment_id=1, time=6),
-    Child(id=2, child_name="Jaco Child", sleep_average=10, treatment_id=2, time=6)
+    Child(id=1, child_name="Laura Child", sleep_average=8, treatment_id=1, time=6),
+    Child(id=2, child_name="Christian Child", sleep_average=6, treatment_id=2, time=4)
 ]
 
 taps = [
