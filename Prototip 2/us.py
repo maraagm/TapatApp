@@ -1,6 +1,3 @@
-# Aquest client de consola fa el següent:
-# Recull el username de l'usuari.
-# Obté la informació de l'usuari pel seu username.
 
 import requests
 
