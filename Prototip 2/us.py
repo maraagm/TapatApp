@@ -59,9 +59,9 @@ class APIClient:
 class ConsoleView:
     @staticmethod
     def menu():
-        print("\n--- MENU ---")
-        print("1. Consultar Usuari")
-        print("2. Consultar Nens de l'Usuari")
+        print("\n------ MENU ------")
+        print("1. Consultar un usuari")
+        print("2. Consultar nens asignats a l'usuari")
         print("3. Sortir")
 
     @staticmethod
@@ -86,7 +86,7 @@ class ConsoleView:
                     print("Aquest usuari no té nens associats")
 
             elif option == "3":
-                print("Adeu!")
+                print("Sortint del programa...")
                 break
 
             else:
