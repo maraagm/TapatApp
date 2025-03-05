@@ -27,7 +27,7 @@ class Child:
 
 
 class APIClient:
-    BASE_URL = "http://localhost:5000/prototip2"  # puerto por defecto def en server2.py
+    BASE_URL = "http://localhost:5000/prototip2"  
 
     @staticmethod
     def get_user(username):
@@ -47,13 +47,11 @@ class APIClient:
     def get_children(username):
         try:
             response = requests.get(f"{APIClient.BASE_URL}/getchildren/{username}")
-            # if response.status_code == 200:
-            #     children = response.json()
-            #     return [Child(c["id"], c["name"], c["sleep_average"], c["treatment_id"], c["time"]) for c in children]
+           
             if response.status_code == 200:
                 children_data = response.json()
                 return [Child(c["id"], c["name"], c["sleep_average"], c["treatment"], c["time"]) for c in children_data]
-                #children = [Child(c["id"], c["name"], c["sleep_average"], c["treatment"], c["time"]) for c in children_data]
+               
             else:
                 print(f"Error: {response.json().get('error', 'No children found')}")
                 return []

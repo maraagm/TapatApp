@@ -1,11 +1,9 @@
 from flask import Flask, request, jsonify
 import dadesServer as dades
 
-#DAOS DE LES CLASSES QUE UTILITZAREM
 class DAOUsers:
     def __init__(self):
         self.users=dades.users
-    # Crear metodo que hace la busqueda
     def getUserByUsername(self,username):
         for u in self.users:
             if u.username == username:
@@ -15,7 +13,6 @@ class DAOUsers:
 class DAORoles:
     def __init__(self):
         self.roles = dades.roles
-
     def getRolById(self, rol_id):
         for rol in self.roles:
             if rol.id == rol_id:
@@ -53,12 +50,11 @@ class DAOChild:
                 return treatment
         return None
 
-# variable que llama al metodo DAOUsers de antes
+
 app = Flask(__name__)
 daoChild = DAOChild()
 daoUser = DAOUsers()
-#daoRol = DAORoles()
-# Endpoints
+
 
 @app.route('/prototip2/getuser/', methods=['GET'])
 def get_user():
@@ -82,14 +78,14 @@ def get_children(username):
     user = daoUser.getUserByUsername(username)
     if not user:
         return jsonify({"error": "Usuari no trobat..."}), 404
-    #children = daoChild.getChildrenByUserId(user["id"])
+
     children = daoChild.getChildrenByUserId(user["id"]) if isinstance(user, dict) else daoChild.getChildrenByUserId(user.id)
-    #children = daoChild.getChildrenByUserId(user.id)
+
     if children:
-        return jsonify(children), 200  # correcte
+        return jsonify(children), 200  
     else:
         return jsonify({"error": "Aquest usuari no té nens associats"}), 404
 
 
 if __name__ == '__main__':
-    app.run(debug=True) #192.168.144.157 , host="0.0.0.0", port=10050
+    app.run(debug=True) 
