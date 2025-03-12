@@ -87,5 +87,10 @@ def get_children(username):
         return jsonify({"error": "Aquest usuari no té nens associats"}), 404
 
 
-if __name__ == '__main__':
-    app.run(debug=True) 
+#if __name__ == '__main__':
+#    app.run(debug=True) 
+
+
+user = daoUser.getUserByUsername("usuari1")
+children = daoChild.getChildrenByUserId(user["id"]) if isinstance(user, dict) else daoChild.getChildrenByUserId(user.id)
+print("aaa", children)

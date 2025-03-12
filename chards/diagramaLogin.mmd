@@ -1,0 +1,22 @@
+@startuml
+actor Usuari
+participant "Interfície d'usuari" as UI
+participant "Controlador d'autenticació" as Controller
+participant "Gestor d'usuaris" as Model
+database "Base de dades" as DB
+
+Usuari -> UI : Introdueix credencials
+UI -> Controller : Envia credencials
+Controller -> Model : Valida usuari i contrasenya
+Model -> DB : Consulta usuari
+DB --> Model : Retorna dades usuari
+Model --> Controller : Resposta validació
+Controller -> UI : Retorna resultat Login
+
+alt Credencials correctes
+    UI -> Usuari : Accés concedit
+else Credencials incorrectes
+    UI -> Usuari : Error d'autenticació
+end
+
+@enduml
