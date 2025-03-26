@@ -1,0 +1,25 @@
+sequenceDiagram
+    participant Jugador1
+    participant Jugador2
+    participant Servidor
+   
+    %% Inici de la partida
+    Jugador1->>Servidor: Crear una nova partida
+    Jugador2->>Servidor: Connectar-se a la partida
+    Servidor-->>Jugador1: Confirmació de connexió
+    Servidor-->>Jugador2: Confirmació de connexió
+   
+    %% Joc en marxa
+    loop Mentre la partida estigui activa
+        Jugador1->>Servidor: Mou nau / Dispara
+        Jugador2->>Servidor: Mou nau / Dispara
+        Servidor-->>Jugador1: Actualitza posició
+        Servidor-->>Jugador2: Actualitza posició
+    end
+   
+    %% Condicions de finalització
+    alt Impacte en el contrari
+        Servidor-->>Tots: Partida finalitzada (Guanyador)
+    else Jugador abandona / Pèrdua de connexió
+        Servidor-->>Tots: Partida finalitzada (Desconnexió)
+    end

@@ -1,0 +1,18 @@
+sequenceDiagram
+    participant Usuario
+    participant Interfaz
+    participant Servidor
+    participant BaseDeDatos
+    
+    Usuario->>Interfaz: Ingresa usuario y contraseña
+    Interfaz->>Servidor: Envía datos de login (usuario y contraseña)
+    Servidor->>BaseDeDatos: Verifica credenciales
+    BaseDeDatos-->>Servidor: Respuesta de autenticación
+    alt Credenciales válidas
+        Servidor->>Servidor: Genera token de autenticación
+        Servidor->>Interfaz: Envía token de autenticación
+        Interfaz->>Usuario: Muestra página principal con token
+    else Credenciales inválidas
+        Servidor->>Interfaz: Muestra mensaje de error
+        Interfaz->>Usuario: "Credenciales incorrectas"
+    end
