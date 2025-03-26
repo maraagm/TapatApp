@@ -31,3 +31,8 @@
 [Diagrama del FrontEnd](/chards/diagramaFrontend.mmd)
 
 ## Prototip 3
+
+[Diagrama Login](/chards/diagramaLoginP3.mmd)
+
+[Diagrama Login Token](/chards/diagramaLoginToken.mmd)
+
