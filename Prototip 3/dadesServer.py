@@ -13,8 +13,8 @@ class User:
         return self.username + ":" + self.password + ":" + self.email
 
 users = [
-    User(id=1, username="mare", password="123", email="mare@gmail.com"),
-    User(id=2, username="pare", password="12", email="pare@gmail.com")
+    User(id=1, username="mare", password="mare123", email="mare@gmail.com"),
+    User(id=2, username="pare", password="pare123", email="pare@gmail.com")
 ]
 
 # Relación entre usuarios y niños
