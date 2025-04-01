@@ -1,0 +1,23 @@
+@startuml
+
+left to right direction
+
+actor user
+actor tutor
+actor cuidador
+
+user --> (login)
+
+tutor --> (add child)
+tutor --> (consulta child)
+(consulta child) --> (consulta user)
+tutor --> (add taps child)
+(add taps child) --> (calcular taps pegat)
+tutor --> (consulta taps child)
+(consulta taps child) --> (consulta chidl)
+
+cuidador --> (consulta child)
+cuidador --> (add taps child)
+cuidador --> (consulta taps child)
+
+@enduml

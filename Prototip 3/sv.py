@@ -1,4 +1,4 @@
-import dadesServer3 as server
+import dadesServer as server
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
